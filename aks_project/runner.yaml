@@ -1,0 +1,12 @@
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: RunnerDeployment
+metadata:
+  name: kalai-runner
+  namespace: arc-runners
+spec:
+  replicas: 1
+  template:
+    spec:
+      repository: kalai-builds/aks-project
+      labels:
+        - aks-runner

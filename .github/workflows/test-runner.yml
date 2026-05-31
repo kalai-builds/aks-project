@@ -1,0 +1,15 @@
+name: Test AKS Runner
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: aks-runner
+    steps:
+      - name: Check runner
+        run: |
+          echo "Running on AKS!"
+          hostname
+          echo "Job complete"
